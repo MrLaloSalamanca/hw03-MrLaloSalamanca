@@ -42,16 +42,49 @@ public class Calendar1 {
 		 
     // Returns true if the given year is a leap year, false otherwise.
 	private static boolean isLeapYear(int year) {
-	    // Replace the following statement with your code
-		return false;
+	     if ( year % 100 == 0) {
+			
+			if (year % 400 == 0) { 
+			return true;
+			
+			} else {
+			return false; 
+			}
+			
+		} else {
+			
+			if (year % 4 == 0) {
+				return true;
+				
+			} else {
+				return false;
+			}
+		}
 	}
+	
 	 
 	// Returns the number of days in the given month and year.
 	// April, June, September, and November have 30 days each.
 	// February has 28 days in a common year, and 29 days in a leap year.
 	// All the other months have 31 days.
 	private static int nDaysInMonth(int month, int year) {
-		// Replace the following statement with your code
-		return 0;
+		if (month == 2) {
+			
+			if (isLeapYear(year)) {
+				return 29;
+				
+			} else {
+				return 28;
+			}
+			
+				} else {
+					if ( month != 4 && month != 6 && month != 9 && month != 11) {
+					return 31;
+				
+						} else {
+							return 30;
+ 			}
+		}
+		
 	}
 }
